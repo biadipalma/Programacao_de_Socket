@@ -1,9 +1,8 @@
 import socket
 import os
 
-# Configurações - Substitua pelo seu TIA conforme o roteiro [cite: 23]
 HOST = '0.0.0.0'
-PORT = 10439  # Primeiros 5 números do seu TIA
+PORT = 10439  # TIA:10439477
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((HOST, PORT))
@@ -23,7 +22,7 @@ while True:
             print("Cliente encerrou a conexão.")
             break
 
-        # Opção 1: Receber Mensagem (Chat) [cite: 22]
+        # Opção 1: Receber Mensagem (Chat)
         elif opcao == "1":
             msg = conn.recv(1024).decode()
             print(f"Cliente: {msg}")
@@ -31,9 +30,9 @@ while True:
             resposta = input("Digite a resposta para o Cliente: ")
             conn.send(resposta.encode())
 
-        # Opção 2: Receber Arquivo [cite: 28, 29]
+        # Opção 2: Receber Arquivo 
         elif opcao == "2":
-            # Recebe o cabeçalho (nome:tamanho)
+            # Recebe o cabeçalho 
             header = conn.recv(1024).decode()
             nome_arquivo, tamanho_arquivo = header.split(":")
             tamanho_arquivo = int(tamanho_arquivo)

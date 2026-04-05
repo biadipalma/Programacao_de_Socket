@@ -41,6 +41,8 @@ def salvar_historico(msg):
     with open("historico.txt", "a") as f:
         f.write(f"{datetime.now()} - {msg}\n")
 
+# conn = conexão com o cliente
+# addr = endereço do cliente
 
 # JOGO 1 - FRUTAS 🍓
 def jogo_sequencia(conn, nome):
@@ -138,9 +140,8 @@ def jogo_cassino(conn, nome):
             # Envia resultado
             conn.send(f"{msg}\nSaldo: {saldo[nome]}\n".encode())
 
-# ========================
 # MENU DO CLIENTE
-# ========================
+
 def handle_client(conn, addr):
     try:
         # Pede nome do jogador
@@ -178,10 +179,8 @@ def handle_client(conn, addr):
 
     conn.close()
 
-# ========================
-# INICIALIZAÇÃO DO SERVIDOR
-# ========================
 
+# INICIALIZAÇÃO DO SERVIDOR
 # Carrega dados salvos
 carregar_saldo()
 

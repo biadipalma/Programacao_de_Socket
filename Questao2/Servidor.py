@@ -1,10 +1,9 @@
-import socket  # Importa o módulo de sockets para comunicação em rede
+import socket  #  módulo de sockets para comunicação em rede
 
-# Define o IP do servidor
-# '0.0.0.0' significa que o servidor aceita conexões de qualquer IP
+# IP do servidor '0.0.0.0' significa que o servidor aceita conexões de qualquer IP
 HOST = '0.0.0.0'
 
-# Porta baseada no TIA (primeiros 5 dígitos)
+# Porta TIA 
 PORT = 10439
 
 # Cria o socket TCP (AF_INET = IPv4, SOCK_STREAM = TCP)
@@ -30,12 +29,12 @@ while True:
     # Recebe mensagem do cliente (até 1024 bytes)
     msg = conn.recv(1024).decode()
 
-    # Se o cliente digitar QUIT, encerra a conexão
+    # Se o cliente digitar QUIT, acaba a conexão
     if msg == "QUIT":
         print("Cliente encerrou a conexão.")
         break
 
-    # Exibe a mensagem recebida
+    # mostra a mensagem recebida
     print("Cliente:", msg)
 
     # Pede uma resposta do servidor
