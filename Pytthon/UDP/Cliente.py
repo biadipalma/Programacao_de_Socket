@@ -1,6 +1,6 @@
 import socket  #importa modulo socket
   
-IP_destino = "192.168.0.3"  #Endereço IP do servidor
+IP_destino = "localhost"  #Endereço IP do servidor
 PORTA_destino = 5005          #Numero de porta do servidor
 MENSAGEM = "Hello, World!"
  

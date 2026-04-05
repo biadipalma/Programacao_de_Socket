@@ -1,6 +1,6 @@
 import socket
 
-IP_servidor = "192.168.0.3" #endereço onde o Server será executado
+IP_servidor = "0.0.0.0" #endereço onde o Server será executado
 PORTA_servidor = 5005       #porta aberta pelo Server para conexão
 
 # Criação de socket UDP
