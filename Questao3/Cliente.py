@@ -1,50 +1,37 @@
 import socket
-import os
+import threading
 
-HOST = 'localhost'
+HOST = '127.0.0.1'
 PORT = 10439
 
+# Recebe mensagens do servidor
+def receber(sock):
+    while True:
+        try:
+            msg = sock.recv(1024).decode()
+            if not msg:
+                break
+            print(msg)
+        except:
+            break
+
+# Envia mensagens para o servidor
+def enviar(sock):
+    while True:
+        try:
+            msg = input()
+            sock.send(msg.encode())
+        except:
+            break
+
+# Cria socket cliente
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Conecta ao servidor
 client.connect((HOST, PORT))
 
-while True:
-    print("\n1 - Enviar mensagem")
-    print("2 - Enviar arquivo")
-    print("3 - Sair")
+# Thread para receber mensagens
+threading.Thread(target=receber, args=(client,)).start()
 
-    opcao = input("Escolha: ")
-    client.send(opcao.encode())
-
-    # SAIR
-    if opcao == "3":
-        break
-
-    # MENSAGEM
-    elif opcao == "1":
-        msg = input("Digite a mensagem: ")
-        client.send(msg.encode())
-
-        resposta = client.recv(1024).decode()
-        print("Servidor:", resposta)
-
-    # ARQUIVO
-    elif opcao == "2":
-        caminho = input("Digite o nome do arquivo: ")
-
-        if not os.path.exists(caminho):
-            print("Arquivo não encontrado!")
-            continue
-
-        client.send(caminho.encode())
-
-        with open(caminho, "rb") as f:
-            while True:
-                dados = f.read(1024)
-                if not dados:
-                    break
-                client.send(dados)
-
-        client.send(b"FIM")
-        print("Arquivo enviado com sucesso!")
-
-client.close()
+# Thread para enviar mensagens
+threading.Thread(target=enviar, args=(client,)).start()

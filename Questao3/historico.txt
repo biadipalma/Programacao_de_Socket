@@ -1,0 +1,17 @@
+2026-04-05 22:34:27.212411 - Bia frutas: VENCEU +20 moedas | Rodadas: 4 | Saldo: 120
+2026-04-05 22:34:41.420112 - Bia cassino: [💎 | 💎 | 💎] JACKPOT! +50 moedas | Saldo: 170
+2026-04-05 22:34:47.767805 - Bia cassino: [💎 | 💎 | 💎] JACKPOT! +50 moedas | Saldo: 220
+2026-04-05 22:34:50.543548 - Bia cassino: [🍋 | 💎 | 💎] Perdeu -10 moedas | Saldo: 210
+2026-04-05 22:34:52.933400 - Bia cassino: [🍐 | 🍒 | 🍒] Perdeu -10 moedas | Saldo: 200
+2026-04-05 22:34:54.666068 - Bia cassino: [🍋 | 🍎 | 🍎] Perdeu -10 moedas | Saldo: 190
+2026-04-05 22:34:57.648448 - Bia cassino: [🍒 | 🍒 | 🍋] Perdeu -10 moedas | Saldo: 180
+2026-04-05 22:34:59.535110 - Bia cassino: [🍋 | 🍒 | 🍋] Perdeu -10 moedas | Saldo: 170
+2026-04-05 22:35:01.576192 - Bia cassino: [🍒 | 🍒 | 💎] Perdeu -10 moedas | Saldo: 160
+2026-04-05 22:35:06.127329 - Bia cassino: [🍒 | 🍐 | 💎] Perdeu -10 moedas | Saldo: 150
+2026-04-05 22:35:07.987221 - Bia cassino: [🍋 | 🍎 | 🍎] Perdeu -10 moedas | Saldo: 140
+2026-04-05 22:35:10.470338 - Bia cassino: [🍒 | 💎 | 🍒] Perdeu -10 moedas | Saldo: 130
+2026-04-05 22:35:12.290996 - Bia cassino: [🍋 | 💎 | 🍐] Perdeu -10 moedas | Saldo: 120
+2026-04-05 22:35:13.973470 - Bia cassino: [🍎 | 🍋 | 💎] Perdeu -10 moedas | Saldo: 110
+2026-04-05 22:35:15.659615 - Bia cassino: [🍎 | 🍋 | 🍐] Perdeu -10 moedas | Saldo: 100
+2026-04-05 22:35:17.240969 - Bia cassino: [🍒 | 🍒 | 🍋] Perdeu -10 moedas | Saldo: 90
+2026-04-05 22:35:18.830284 - Bia cassino: [🍋 | 🍋 | 🍋] JACKPOT! +50 moedas | Saldo: 140
